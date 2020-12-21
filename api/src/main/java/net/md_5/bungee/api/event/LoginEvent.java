@@ -1,10 +1,6 @@
 package net.md_5.bungee.api.event;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import net.md_5.bungee.api.Callback;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -14,7 +10,7 @@ import net.md_5.bungee.api.plugin.Cancellable;
 /**
  * Event called to represent a player logging in.
  */
-@Data
+@Getter @Setter
 @ToString(callSuper = false)
 @EqualsAndHashCode(callSuper = false)
 public class LoginEvent extends AsyncEvent<LoginEvent> implements Cancellable
