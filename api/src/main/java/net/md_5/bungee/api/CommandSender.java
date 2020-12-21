@@ -1,6 +1,9 @@
 package net.md_5.bungee.api;
 
 import java.util.Collection;
+
+import dz.ibrahim.bungee.IBungee;
+import dz.ibrahim.bungee.lang.Lang;
 import net.md_5.bungee.api.chat.BaseComponent;
 
 public interface CommandSender
@@ -89,4 +92,14 @@ public interface CommandSender
      * permissions
      */
     public Collection<String> getPermissions();
+
+    /**
+     * Ibrahim API
+     *
+     * Get a lang of a CommandSender
+     * @return the current lang of the sender
+     */
+    default Lang getLang() {
+        return IBungee.getInstance().getLangHandler().ENGLISH;
+    }
 }

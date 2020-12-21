@@ -3,6 +3,8 @@ package net.md_5.bungee.api.connection;
 import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
+
+import dz.ibrahim.bungee.lang.Lang;
 import net.md_5.bungee.api.Callback;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.CommandSender;
@@ -337,4 +339,12 @@ public interface ProxiedPlayer extends Connection, CommandSender
      * @return this player's {@link Scoreboard}
      */
     Scoreboard getScoreboard();
+
+    /**
+     * Ibrahim API
+     *
+     * Change lang of the player
+     * @param lang the lang to set
+     */
+    void setLang(Lang lang);
 }

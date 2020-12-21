@@ -47,7 +47,7 @@ public class BungeeCordLauncher
             return;
         }
 
-        if ( BungeeCord.class.getPackage().getSpecificationVersion() != null && System.getProperty( "IReallyKnowWhatIAmDoingISwear" ) == null )
+        /*if ( BungeeCord.class.getPackage().getSpecificationVersion() != null && System.getProperty( "IReallyKnowWhatIAmDoingISwear" ) == null )
         {
             String version = BungeeCord.class.getPackage().getSpecificationVersion();
 
@@ -105,7 +105,7 @@ public class BungeeCordLauncher
                     Thread.sleep( TimeUnit.SECONDS.toMillis( 2 ) );
                 }
             }
-        }
+        }*/
 
         BungeeCord bungee = new BungeeCord();
         ProxyServer.setInstance( bungee );

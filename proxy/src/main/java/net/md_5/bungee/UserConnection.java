@@ -2,6 +2,8 @@ package net.md_5.bungee;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
+import dz.ibrahim.bungee.IBungee;
+import dz.ibrahim.bungee.lang.Lang;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -145,6 +147,9 @@ public final class UserConnection implements ProxiedPlayer
             ch.write( packet );
         }
     };
+    /*========================================================================*/
+    private Lang lang = IBungee.getInstance().getLangHandler().ENGLISH;
+    /*========================================================================*/
 
     public void init()
     {
@@ -744,5 +749,15 @@ public final class UserConnection implements ProxiedPlayer
     public Scoreboard getScoreboard()
     {
         return serverSentScoreboard;
+    }
+
+    @Override
+    public Lang getLang() {
+        return this.lang;
+    }
+
+    @Override
+    public void setLang(Lang lang) {
+        this.lang = lang;
     }
 }
